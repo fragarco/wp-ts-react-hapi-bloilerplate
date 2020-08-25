@@ -1,7 +1,6 @@
 import * as React from "react";
 import { shallow } from "enzyme";
 import { AppFrame } from "../components/appframe";
-import ShowPanel from "../containers/showpanel";
 
 describe("AppFrame Component", () => {
     let repr: any = null;
@@ -10,10 +9,10 @@ describe("AppFrame Component", () => {
         repr = shallow(<AppFrame />);
     });
 
-    it("Should have a ShowPanel", () => {
+    it("Should have hello world message", () => {
         console.log(repr);
         expect(
-            repr.contains(<ShowPanel />),
+            repr.contains(<h1>Hello World!</h1>),
         ).toBe(true);
     });
 

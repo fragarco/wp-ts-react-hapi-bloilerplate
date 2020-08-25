@@ -1,5 +1,5 @@
 module.exports = {
-    rootDir: "../",
+    rootDir: "./",
     roots: [
         "<rootDir>/src"
     ],
@@ -16,7 +16,7 @@ module.exports = {
     setupFilesAfterEnv: ["<rootDir>/jest/setupTests.ts"],
     globals: {
         "ts-jest": {
-            tsConfig: "<rootDir>/config/tsconfig.json",
+            tsConfig: "<rootDir>/tsconfig.json",
         },
     },
     moduleFileExtensions: [

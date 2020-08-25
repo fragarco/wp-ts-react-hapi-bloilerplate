@@ -25,7 +25,7 @@ When used to start a new application, remember to edit the file index.html to ad
 You need to have node 12.X installed in your system. After cloning this repository run the following commands from a command shell inside the project root directory:
 
 npm install
-rpm build
+rpm run build
 npm start
 
-After the server prints its information about from where it is serving data, you can open a web browser and connecto to http://localhost:8080.
+After the server prints its information about from where it is serving data, you can open a web browser and connect to http://localhost:8080.

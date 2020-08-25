@@ -33,8 +33,8 @@ export class WebServer {
         await this.server.start();
     }
 
-    public stop = () => {
-        this.server.stop();
+    public stop = async () => {
+        await this.server.stop();
     }
 }
 

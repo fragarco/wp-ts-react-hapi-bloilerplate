@@ -1,7 +1,7 @@
 import * as Path from "path";
 import { WebServer } from "./server";
 
-const APP_PORT = 8080;
+export const APP_PORT = 8080;
 
 const main = async () => {
     let  rootpath = Path.resolve(process.cwd(), "..");

@@ -1,24 +1,24 @@
 import * as Path from "path";
-import { WebControlServer } from "../server";
+import { WebServer } from "../server";
 
 describe("Initial connection to /", () => {
-    let backend: WebControlServer = null;
+    let backend: WebServer = null;
 
     beforeAll(async (done) => {
         const rootdir = Path.join(process.cwd(), "dist");
-        backend = new WebControlServer(rootdir, 80);
+        backend = new WebServer(rootdir, 8080);
         backend.server.events.on("start", () => {
             done();
         });
         await backend.init();
-        backend.server.start();
+        await backend.server.start();
     });
 
-    afterAll((done) => {
+    afterAll(async (done) => {
         backend.server.events.on("stop", () => {
             done();
         });
-        backend.server.stop();
+        await backend.server.stop();
     });
 
     it("Should success with server connection", async () => {

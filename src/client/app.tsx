@@ -1,7 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { AppFrame } from "./components/appframe";
 
 ReactDOM.render(
-    <h1>Put here your main React component</h1>,
+    <AppFrame />,
     document.getElementById("content"),
 );
